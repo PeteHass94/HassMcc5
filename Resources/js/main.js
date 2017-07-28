@@ -9,6 +9,13 @@ function date_time(date_time)
         day = date.getDay();
         days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
         h = date.getHours();
+        if(d>3 && d<21) { d = d+'th';}
+          switch (d % 10) {
+            case 1:  d=d+"st";
+            case 2:  d=d+"nd";
+            case 3:  d=d+"rd";
+        default: d=d+"th";
+    }
         if(h<10)
         {
                 h = "0"+h;
@@ -41,6 +48,10 @@ function open_closed(day_hour)
             openColor = '#208000';
             message = message+"Open";
         }
+        else if (day_hour[1] == openDays && day_hour[2] == '13' )  {
+          openColor = '#FF9867';
+          message = message+"Closed for Lunch";
+        }
         else {
             openColor = '#FF4545';
             message = message+ "Closed";
@@ -51,3 +62,28 @@ function open_closed(day_hour)
         return true;
 
 }
+'use strict';
+var docStyle = document.documentElement.style;
+var aElem = document.querySelector('a');
+var boundingClientRect = aElem.getBoundingClientRect();
+aElem.onmousemove = function (e) {
+    var x = e.clientX - boundingClientRect.left;
+    var y = e.clientY - boundingClientRect.top;
+    var xc = boundingClientRect.width / 2;
+    var yc = boundingClientRect.height / 2;
+    var dx = x - xc;
+    var dy = y - yc;
+    docStyle.setProperty('--rx', dy / -1 + 'deg');
+    docStyle.setProperty('--ry', dx / 10 + 'deg');
+};
+aElem.onmouseleave = function (e) {
+    docStyle.setProperty('--ty', '0');
+    docStyle.setProperty('--rx', '0');
+    docStyle.setProperty('--ry', '0');
+};
+aElem.onmousedown = function (e) {
+    docStyle.setProperty('--tz', '-25px');
+};
+document.body.onmouseup = function (e) {
+    docStyle.setProperty('--tz', '-12px');
+};
