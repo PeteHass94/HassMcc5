@@ -78,30 +78,31 @@ div {
 
 /* contact-info */
 .contact-info {
+  display: flex;
   margin: 2rem;
   margin-top: 3rem;
 }
 .contact-info a{
-
+  margin: auto;
 }
 .contact-info span{
   display: inline;
   font-size: 2rem;
   font-family: "Oswald", Helvetica, sans-serif;
+  color: #00165A;
 }
 .btn {
   padding: 2rem;
   background: transparent;
   outline: none;
-  cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   display: inline;
   border: 2px solid transparent;
 }
 #email.btn:hover{
-  background: #000;
-  color: #fff;
+  background: #800020;
+  color: #ffffff;
   transition-timing-function: ease-in;
   transition-duration: 1s;
 }
