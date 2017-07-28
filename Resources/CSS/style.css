@@ -1,0 +1,107 @@
+/*
+color hunt.co: http://colorhunt.co/c/71366
+ dark red: #FF4545
+ orange: #FF9867
+ light orange: #FFBF87
+ yellow: #FFEDB2
+
+ http://colorhunt.co/c/78489
+ blue: #18587A
+ orange: #FC624D
+ pink: #FCA7A7
+ light pink: #FFD6D6
+
+font: sintony and poppins from https://www.behance.net/gallery/35768979/Typography-Google-Fonts-Combinations
+blue: #3490DE for read more links
+white: #ffffff
+black: #000000
+
+http://www.99colors.net/name/burgundy
+Triadic Colors
+#800020 Burgundy
+#208000 Green
+#165A00 Dark Green
+#3CA619  Lime Green
+#002080 Dark Blue
+#00165A navy
+#193CA6 blue
+
+
+google api key AIzaSyCs6rT_VVjyfX5dBnxWY5XXKQyb8LBXkvE
+<iframe src="https://www.google.com/maps/embed?pb=!1m0!4v1500827725695!6m8!1m7!1s1H78Wv1YJNdr2rPtgXsnvA!2m2!1d54.3439488311084!2d-7.635358064693378!3f310.243354077671!4f-9.52507538905617!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+*/
+
+html {
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-family: "Oswald", Helvetica, sans-serif;
+}
+
+/* header */
+header {
+  display: inline;
+  align-items: flex-start;
+  width: 100%;
+  background-color: #00165A;
+  color: #FF9867;
+
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1rem;
+  margin: 0 auto 1rem auto;
+}
+
+header span {
+  margin: 1rem 1rem;
+}
+header span#open_closed {
+  padding: 0.5rem;
+}
+
+/* main */
+div {
+  display: flex;
+  margin: auto;
+}
+/* card */
+.card {
+
+}
+
+
+
+/* contact-info */
+.contact-info {
+  margin: 2rem;
+  margin-top: 3rem;
+}
+.contact-info a{
+
+}
+.contact-info span{
+  display: inline;
+  font-size: 2rem;
+  font-family: "Oswald", Helvetica, sans-serif;
+}
+.btn {
+  padding: 2rem;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline;
+  border: 2px solid transparent;
+}
+#email.btn:hover{
+  background: #000;
+  color: #fff;
+  transition-timing-function: ease-in;
+  transition-duration: 1s;
+}
