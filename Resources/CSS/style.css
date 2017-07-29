@@ -196,32 +196,121 @@ body{
 }
 #email.btn:hover{
   background: #800020;
-  color: #ffffff;
-  transition-timing-function: ease-in;
+  color: #FF9867;
+  transition-timing-function: ease-out;
   transition-duration: 1s;
 }
 /* address */
+.bottom.left {
+  padding-right: 0;
+  display: flex;
+  align-content: center;
+}
+.address {
+  text-align: center;
+  margin-right: 0;
+}
 #address {
   font-size: 1.5rem;
 }
 /* map */
+.bottom.right {
+  margin:  1rem auto;
+}
+.maps,
+.maps::before,
+.maps::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 5rem;
+}
+
+.maps a {
+  margin: auto 1.2rem;
+  color: #333;
+  text-decoration: none;
+  transition: 0.3s all ease;
+}
+.maps a:hover {
+  color: #B15947;
+}
+.maps a:focus {
+  text-decoration: none;
+}
+.maps a:active {
+  color: #FFF;
+}
+.maps i {
+  font-size: 2rem;
+}
+.maps span{
+  height: 5rem;
+  font-family: "Oswald", Helvetica, sans-serif;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+}
+
 .maps {
-  padding: 1rem 0.5rem;
+  margin-top: 0.5rem;
   display: flex;
-  flex-direction: column;
-  margin: auto;
-}
-.maps div {
-  margin: auto;
-}
-.maps .gMap, .maps .streetView {
-  margin-bottom: 1rem;
-  padding: 1rem;
-}
-.maps a span{
-  display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin: auto;
-  padding: 0;
+}
+
+.bttn {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  position: relative;
+}
+.bttn:after {
+  transition: 0.3s all ease;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 3px;
+  border: 3px solid #00165A;
+}
+.bttn:before {
+  content: '';
+  position: absolute;
+  border-radius: 3px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background: #800020;
+  z-index: -1;
+}
+.bttn:hover:after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.bttn:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.bttn:active:before {
+  background-color: #FF9867;
+}
+.bttn:active:after {
+  border-color: #800020;
+}
+.bttn i:active:after {
+
+}
+i:active {
+  color: #FF9867;
+  transition-timing-function: ease-out;
+  transition-duration: 1s;
 }
