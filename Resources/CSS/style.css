@@ -54,7 +54,6 @@ header {
   font-size: 2rem;
   font-weight: 600;
   padding: 0.5rem;
-
 }
 
 header span {
@@ -192,7 +191,7 @@ body{
   transition: all 0.3s ease;
   position: relative;
   display: inline;
-  border: 2px solid transparent;
+  border: 2px solid #00165A;
 }
 #email.btn:hover{
   background: #800020;
@@ -225,7 +224,6 @@ body{
   box-sizing: border-box;
   height: 5rem;
 }
-
 .maps a {
   margin: auto 1.2rem;
   color: #333;
@@ -250,14 +248,12 @@ body{
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
 }
-
 .maps {
   margin-top: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .bttn {
   width: 100px;
   height: 100px;
@@ -305,12 +301,4 @@ body{
 }
 .bttn:active:after {
   border-color: #800020;
-}
-.bttn i:active:after {
-
-}
-i:active {
-  color: #FF9867;
-  transition-timing-function: ease-out;
-  transition-duration: 1s;
 }
