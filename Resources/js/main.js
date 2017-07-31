@@ -43,8 +43,6 @@ function date_time(CurrentDay, CurrentHour)
         return day_hour;
 }
 
-
-
 function open_closed(day_hour)
 {
         date = new Date;
@@ -54,7 +52,7 @@ function open_closed(day_hour)
         var note = "Closed";
         var openColor = '#FF4545';
         for (var i = 0; i<7; i++) {
-          if (day_hour[0] < 6)
+          if (day_hour[0]>0 && day_hour[0] < 6)
           {
             if (day_hour[1] == openTimes[i])
             {
