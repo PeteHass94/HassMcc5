@@ -57,7 +57,7 @@ header {
 }
 
 header span {
-  margin: 1rem 1rem;
+  margin: 1rem 2.5rem;
 
 }
 header span#open_closed {
@@ -140,20 +140,30 @@ a#jumbotron::after {
           transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
 }
 /* menu */
-.menu {
+.sidebar {
   display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebar h1{
   font-family: "Quattrocento", Georgia, serif;
   font-weight: 600;
   font-size: 1.5rem;
   color: #00165A;
 }
-.menu ul li{
-  margin: 1rem auto;
+.sidebar img {
+  height: 10rem;
+  display: flex;
+  margin: 5rem 1rem 0 auto;
+  padding: 0.25rem 1.25rem;
+  border: 3px solid #00165A;
+  background-color: #FFFFFF;
+}
 
-}
-.menu ul li i{
-  margin-right: 0.5rem;
-}
+
 body{
   display: -webkit-box;
   display: -ms-flexbox;
