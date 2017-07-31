@@ -9,13 +9,18 @@ function date_time(CurrentDay, CurrentHour)
         day = date.getDay();
         days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
         h = date.getHours();
-        if(d>3 && d<21) { d = d+'th';}
-          switch (d % 10) {
-            case 1:  d=d+"st";
-            case 2:  d=d+"nd";
-            case 3:  d=d+"rd";
-        default: d=d+"th";
-    }
+        var superscript=" ";
+        if(d>3 && d<21) { superscript="th";}
+        switch (d % 10) {
+            case 1:  superscript="st";
+                      break;
+            case 2:  superscript="nd";
+                      break;
+            case 3:  superscript="rd";
+                      break;
+            default: superscript="th";
+        }
+        d= d+superscript;
         if(h<10)
         {
                 h = "0"+h;
