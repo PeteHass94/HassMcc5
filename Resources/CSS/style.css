@@ -63,6 +63,10 @@ header span {
 header span#open_closed {
   padding: 0.5rem;
 }
+/* nav */
+nav {
+  display: none;
+}
 /* main */
 div {
   display: flex;
@@ -223,8 +227,8 @@ body{
 #email.btn:hover{
   background: #800020;
   color: #FF9867;
-  transition-timing-function: ease-out;
-  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+  transition-duration: 1s;
 }
 #tel {
   align-items: center;
@@ -323,7 +327,31 @@ body{
 }
 .bttn:active:before {
   background-color: #800020;
+  transition-timing-function: ease-in;
+  transition-duration: 1s;
 }
-.bttn:active:after {
-  border-color: #800020;
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #800020;
+  color: #FF9867;
+  width: 100%;
+  margin: 2rem 0 0 0;
+  padding: 1rem;
+}
+footer p{
+  margin: auto 2rem;
+}
+footer ul {
+  margin: auto 2rem;
+}
+footer ul li{
+  display: inline-flex;
+  margin-left: 1rem;
+}
+footer a {
+  color: #FF9867;
 }

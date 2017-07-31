@@ -3,20 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link href="./Resources/CSS/reset.css" type="text/css" rel="stylesheet">
     <link href="./Resources/CSS/test.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Quattrocento:400,700" rel="stylesheet">
   </head>
   <body>
-    <div class="flex">
-      <a href="#0" class="bttn"><span>
-      <i class="fa fa-map-marker" aria-hidden="true"></i><br />Map
-      </span></a>
-      <a href="0" class="bttn"><span>
-      <i class="fa fa-street-view" aria-hidden="true"></i><br/>streetView
-    </span>
-      </a>
+    <nav id="hidden">
+      <div class="menu">
+          <ul>
+            <li><a href="#Home"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+            <li><a href="#Services"><i class="fa fa-calculator" aria-hidden="true"></i>Services</a></li>
+            <li><a href="#Staff"><i class="fa fa-users" aria-hidden="true"></i>Staff</a></li>
+            <li><a href="#Contact"><i class="fa fa-address-book" aria-hidden="true"></i>Contact us</a></li>
+            <li><a href="#More"><i class="fa fa-info-circle" aria-hidden="true"></i>More information</a></li>
+          </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <button class="js-menu hamb" type="button">
+      	<span class="bar"></span>
+      </button>
+      <div class="select">
+        <a href="#" ><h1 onclick="displayNav()">Display menu</h1></a>
+      </div>
+      <div class="deselect">
+        <a href="#" ><h1 onclick="hideNav()">Hide menu</h1></a>
+      </div>
     </div>
-
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"></script>
   <script type="text/javascript" src="./Resources/js/test.js"></script>
 </body>
 </html>
