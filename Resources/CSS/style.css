@@ -82,9 +82,7 @@ body {
 }
 /* card */
 .card {
-  margin: 1rem auto;
-  margin-left: 2rem;
-  padding-top: 1rem;
+  margin: 2rem auto auto 1rem;
 }
 #jumbotron {
   position: relative;

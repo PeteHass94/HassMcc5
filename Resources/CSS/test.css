@@ -43,6 +43,9 @@ html {
   border-left: 0.125rem solid #800020;
   border-right: 0.125rem solid #800020;
 }
+#hidden ul li p {
+  display: inline-flex;
+}
 #hidden ul li:first-child {
   border-left: none;
 }
@@ -117,14 +120,14 @@ html {
   transition: 0.2s background linear 0.1s, 0.2s top linear, 0.2s transform linear 0.2s;
 }
 
-#hidden {
+#hidden, body {
   height: 6rem;
   width: 100%;
   transform: translateY(-6rem);
   transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91);
   padding-top: 0;
 }
-.menu-open #hidden {
+.menu-open #hidden, body.menu-open {
   transform: translateY(0);
 }
 .selectBar {
