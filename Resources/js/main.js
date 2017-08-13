@@ -75,29 +75,18 @@ function open_closed(day_hour)
         document.getElementById('open_closed').style.color = openColor;
         return true;
 }
+var isActive = false;
 
-'use strict';
-var docStyle = document.documentElement.style;
-var aElem = document.querySelector('a');
-var boundingClientRect = aElem.getBoundingClientRect();
-aElem.onmousemove = function (e) {
-    var x = e.clientX - boundingClientRect.left;
-    var y = e.clientY - boundingClientRect.top;
-    var xc = boundingClientRect.width / 2;
-    var yc = boundingClientRect.height / 2;
-    var dx = x - xc;
-    var dy = y - yc;
-    docStyle.setProperty('--rx', dy / -1 + 'deg');
-    docStyle.setProperty('--ry', dx / 10 + 'deg');
-};
-aElem.onmouseleave = function (e) {
-    docStyle.setProperty('--ty', '0');
-    docStyle.setProperty('--rx', '0');
-    docStyle.setProperty('--ry', '0');
-};
-aElem.onmousedown = function (e) {
-    docStyle.setProperty('--tz', '-25px');
-};
-document.body.onmouseup = function (e) {
-    docStyle.setProperty('--tz', '-12px');
-};
+$('.js-menu').on('click', function() {
+	if (isActive) {
+		$(this).removeClass('active');
+		$('body').removeClass('menu-open');
+    $("#menuComment").text("Display Menu");
+	} else {
+		$(this).addClass('active');
+		$('body').addClass('menu-open');
+    $("#menuComment").text("Hide Menu");
+	}
+
+	isActive = !isActive;
+});
