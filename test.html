@@ -9,10 +9,14 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Quattrocento:400,700" rel="stylesheet">
   </head>
   <body>
+    <header>
+      <span></span>
+    </header>
+
     <nav id="hidden">
       <div class="menu">
           <ul>
-            <li><a href="#Home"><i class="fa fa-home" aria-hidden="true"></i><p>Home</p></a></li>
+            <li class="openTab"><a href="#Home" ><i class="fa fa-home" aria-hidden="true"></i><p>Home</p></a></li>
             <li><a href="#Services"><i class="fa fa-calculator" aria-hidden="true"></i><p>Services</p></a></li>
             <li><a href="#Staff"><i class="fa fa-users" aria-hidden="true"></i><p>Staff</p></a></li>
             <li><a href="#Contact"><i class="fa fa-address-book" aria-hidden="true"></i><p>Contact Us</p></a></li>
@@ -20,21 +24,24 @@
           </ul>
       </div>
     </nav>
+    <main class="home">
     <div class="container">
-
       <div class="selectBar">
         <button class="js-menu hamb" type="button">
         	<span class="bar"></span>
         </button>
         <span id="menuComment">Display Menu</span>
       </div>
-      <div class="select">
-        <a href="#" ><h1 onclick="displayNav()">Display menu</h1></a>
-      </div>
-      <div class="deselect">
-        <a href="#" ><h1 onclick="hideNav()">Hide menu</h1></a>
-      </div>
     </div>
+  </main>
+  <main class="services">
+    <div class="container">
+
+
+
+
+    </div>
+    </main>
     <script
       src="https://code.jquery.com/jquery-3.2.1.js"
       integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="

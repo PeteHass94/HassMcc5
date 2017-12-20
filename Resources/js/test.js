@@ -1,11 +1,4 @@
 
-function displayNav(){
-  document.getElementById("hidden").style.display = "flex";
-}
-function hideNav(){
-  document.getElementById("hidden").style.display = "none";
-}
-
 var isActive = false;
 
 $('.js-menu').on('click', function() {

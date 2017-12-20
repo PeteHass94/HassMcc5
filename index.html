@@ -6,6 +6,7 @@
     <!-- CSS -->
     <link href="./Resources/CSS/reset.css" type="text/css" rel="stylesheet">
     <link href="./Resources/CSS/style.css" type="text/css" rel="stylesheet">
+    <link href='css/bootstrap.css' rel='stylesheet' />
     <script type="text/javascript" src="./Resources/js/main.js"></script>
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Quattrocento:400,700" rel="stylesheet">
@@ -21,23 +22,30 @@
             <span id="open_closed"></span>
             <script type="text/javascript">window.onload = open_closed('day_hour');</script>
     </header>
-    <nav>
-      <ul>
-        <li><i class="fa fa-home" aria-hidden="true"></i>Home</li>
-        <li><i class="fa fa-calculator" aria-hidden="true"></i>Services</li>
-        <li><i class="fa fa-users" aria-hidden="true"></i>Staff</li>
-        <li><i class="fa fa-address-book" aria-hidden="true"></i>Contact us</li>
-        <li><i class="fa fa-info-circle" aria-hidden="true"></i>More information</li>
-      </ul>
+    <nav id="hidden">
+      <div class="menu">
+          <ul>
+            <li class="openTab"><a href="#Home" ><i class="fa fa-home" aria-hidden="true"></i><p>Home</p></a></li>
+            <li><a href="#Services"><i class="fa fa-calculator" aria-hidden="true"></i><p>Services</p></a></li>
+            <li><a href="#Staff"><i class="fa fa-users" aria-hidden="true"></i><p>Staff</p></a></li>
+            <li><a href="#Contact"><i class="fa fa-address-book" aria-hidden="true"></i><p>Contact Us</p></a></li>
+            <li><a href="#More"><i class="fa fa-info-circle" aria-hidden="true"></i><p>More Info</p></a></li>
+          </ul>
+      </div>
     </nav>
     <main>
-      <div class="container">
-        <div class="card">
-          <!--Business card -->
-          <a id="jumbotron" href="#"></a>
+      <div class="container" id="intro">
+        <div class="card" id="card">
+          <!--Business card
+          <a id="jumbotron" href="#"></a> -->
         </div>
         <div class="sidebar">
-            <h1>Display Menu</h1>
+          <div class="selectBar">
+            <button class="js-menu hamb" type="button">
+              <span class="bar"></span>
+            </button>
+            <span id="menuComment">Display Menu</span>
+          </div>
             <a href="https://www.charteredaccountants.ie/" target="_blank"><img src="./Resources/images/CA-Ireland-Logo.png" target="_blank" alt=""></a>
         </div>
       </div>
@@ -46,6 +54,9 @@
           <div class="left mainEmail">
             <a  href="mailto:accounts@hassardmcc.co.uk?Subject=From%20Website" target="_top">
               <span class="btn" id="email">Email: accounts@hassardmcc.co.uk</span>
+            </a>
+            <a>
+            <span class="btn" id="tel">Tel: 028 6632 0555</span>
             </a>
           </div>
           <div class="center mainAddress">
@@ -65,9 +76,9 @@
               </span></a>
             </div>
           </div>
-          <div class="right phone">
+          <!-- <div class="right phone">
             <span class="btn" id="tel">Tel: 028 6632 0555</span>
-          </div>
+          </div> -->
         </div>
 
     </main>
